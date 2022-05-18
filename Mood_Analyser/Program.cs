@@ -25,7 +25,8 @@ while (true)
             break;
         case 3:
             MoodAnalyzerException a3 = new MoodAnalyzerException();
-            a3.MoodAnalyzerExceptionMethod(null);
+            string mood3 = a3.MoodAnalyzerExceptionMethod(null);
+            Console.WriteLine(mood3);
 
             break;
         default:

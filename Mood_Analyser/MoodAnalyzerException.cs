@@ -22,13 +22,10 @@ namespace Mood_Analyser
                 {
                     return message2;
                 }
-                
             }
-            catch (NullReferenceException ex)
+            catch(Exception ex)
             {
-                Console.WriteLine("You have provided null reference!");
-                Console.WriteLine(ex.Message);
-                
+                return "HAPPY";
             }
             return null;
         }
