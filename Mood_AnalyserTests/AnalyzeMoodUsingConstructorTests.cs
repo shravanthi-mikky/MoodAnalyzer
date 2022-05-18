@@ -18,5 +18,12 @@ namespace Mood_Analyser.Tests
             string mood1 = a1.AnalyseMoodMethod1();
             Assert.AreEqual("SAD", mood1);
         }
+        [TestMethod()]
+        public void AnalyseMoodMethod1Test2()
+        {
+            AnalyzeMoodUsingConstructor a2 = new("I am in Happy Mood");
+            string mood2 = a2.AnalyseMoodMethod1();
+            Assert.AreEqual("HAPPY", mood2);
+        }
     }
 }
