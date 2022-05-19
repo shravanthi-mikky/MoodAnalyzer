@@ -5,7 +5,7 @@ Console.WriteLine("Mood Analyser!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception");
+    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception\n4)Mood Custom Exceptions");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -27,7 +27,10 @@ while (true)
             MoodAnalyzerException a3 = new MoodAnalyzerException();
             string mood3 = a3.MoodAnalyzerExceptionMethod(null);
             Console.WriteLine(mood3);
-
+            break;
+        case 4:
+            MoodAnalysisException a4 = new MoodAnalysisException();
+            a4.MoodAnalysisExceptionMethod(null);
             break;
         default:
             break;
