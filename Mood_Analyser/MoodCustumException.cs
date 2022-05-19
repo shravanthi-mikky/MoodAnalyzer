@@ -20,7 +20,7 @@ namespace Mood_Analyser
         }
     }
     public class MoodAnalysisException
-    {
+    {        
         public string MoodAnalysisExceptionMethod(string message)
         {
             try
@@ -44,7 +44,8 @@ namespace Mood_Analyser
             catch (NullReferenceException)
             {
                 Console.WriteLine("You have provided null reference!");
-                throw new MoodCustomException1(MoodCustomException1.ExpType.Empty_Message, "Mood should not be Null");
+                throw new MoodCustomException1(MoodCustomException1.ExpType.Null_Message, "Mood should not be Null");
+                return "NULL";
             }
             return default(String);
         }

@@ -5,7 +5,7 @@ Console.WriteLine("Mood Analyser!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception\n4)Mood Custom Exceptions");
+    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception\n4) Mood Custom Exceptions");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
