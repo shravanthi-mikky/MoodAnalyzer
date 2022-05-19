@@ -32,6 +32,9 @@ while (true)
             MoodAnalysisException a4 = new MoodAnalysisException();
             a4.MoodAnalysisExceptionMethod(null);
             break;
+        case 5:
+            object actual = MoodAnalyzerFactory.CreateMoodAnalyser("Mood_Analyser.MoodAnalysisException", "MoodAnalysisException");
+            break;
         default:
             break;
     }
