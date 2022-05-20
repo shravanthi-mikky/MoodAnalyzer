@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace Mood_Analyser
 {
     public class AnalyseMood
-    {       
+    {
         public string AnalyseMoodMethod(string message)
         {           
             string message1 = "SAD";

@@ -22,8 +22,7 @@ namespace Mood_Analyser.Tests
             catch (MoodCustomException1 ex)
             {
                 Assert.AreEqual("Mood should not be empty",ex.Message);
-            }
-            
+            }           
         }
         [TestMethod()]
         public void MoodAnalysisExceptionMethodTest1()
@@ -37,7 +36,6 @@ namespace Mood_Analyser.Tests
             {
                 Assert.AreEqual("Mood should not be Null", ex.Message);
             }
-
         }
     }
 
