@@ -5,7 +5,7 @@ Console.WriteLine("Mood Analyser!");
 
 while (true)
 {
-    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception\n4) Mood Custom Exceptions");
+    Console.WriteLine("Please choose the option :\n1)Basic Mood Analyzer\n2)Using the Default\\Parameterized Constructor\n3)Exception\n4) Mood Custom Exceptions\n5)Reflection with default constructor\n6)Reflection with Parameterized constructor");
     int option = Convert.ToInt16(Console.ReadLine());
     switch (option)
     {
@@ -34,8 +34,15 @@ while (true)
             break;
         case 5:
             object actual = MoodAnalyzerFactory.CreateMoodAnalyser("Mood_Analyser.MoodAnalysisException", "MoodAnalysisException");
+            Console.WriteLine(actual);
+            break;
+        case 6:
+            object obj = MoodAnalyzerParameterizedConstructor.UsingParameterizedConstructor("Mood_Analyser.AnalyseMood1", "AnalyseMood1","HAPPY");
+            Console.WriteLine(obj);
+            //call object
             break;
         default:
+            Console.WriteLine("Please choose the correct option!");
             break;
     }
 }
