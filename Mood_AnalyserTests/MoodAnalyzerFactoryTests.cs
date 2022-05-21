@@ -67,6 +67,42 @@ namespace Mood_Analyser.Tests
             }
         }
 
-    }
+        // TC - 7.1
+        [TestMethod()]
+        public void SetFieldTest()
+        {
+            object Expected = new AnalyseMood1("Happy");
+            string result9 = MoodAnalyzerFactory.SetField("Happy", "message2");
+            Expected.Equals(result9);
+        }
+        // TC - 7.2
+        [TestMethod()]
+        public void SetFieldTest1()
+        {
+            string expected = "Field is Not Found";
+            try
+            {
+                string result9 = MoodAnalyzerFactory.SetField("Happy", "123_message2");
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
 
+        // TC - 7.3
+        [TestMethod()]
+        public void SetFieldTest2()
+        {
+            string expected = "Message should not be null";
+            try
+            {
+                string result9 = MoodAnalyzerFactory.SetField(null, "message2");
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
+    }
 }
