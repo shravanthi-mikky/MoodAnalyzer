@@ -35,15 +35,19 @@ namespace Mood_Analyser
     }
     public class AnalyseMood1
     {
-        public string msg;
+        public string message2 = "HAPPY";
+        public AnalyseMood1()
+        {
+          
+        }
         public AnalyseMood1(string Message)
         {
-            this.msg = Message;
+            this.message2 = Message;
         }
         public string AnalyseMoodMethod1()
         {
             string message1 = "SAD";
-            if (msg.ToUpper().Contains(message1.ToUpper()))
+            if (message2.ToUpper().Contains(message1.ToUpper()))
             {
                 return message1;
             }
@@ -53,4 +57,5 @@ namespace Mood_Analyser
             }
         }
     }
+
 }
