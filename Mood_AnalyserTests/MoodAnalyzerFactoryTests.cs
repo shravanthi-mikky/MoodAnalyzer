@@ -44,6 +44,29 @@ namespace Mood_Analyser.Tests
                 Assert.AreEqual(expected, ex.Message);
             }
         }
+        // uc6 6.1 TestCase
+        [TestMethod()]
+        public void InvokeAnalyseMoodTest()
+        {
+            string expected = "HAPPY";
+            string obj = MoodAnalyzerFactory.InvokeAnalyseMood("HAPPY", "AnalyseMoodMethod1");
+            Assert.AreEqual(expected, obj);
+        }
+        // TestCase 6.2
+        [TestMethod()]
+        public void InvokeAnalyseMoodTest1()
+        {
+            string expected = "Method is Not Found";
+            try
+            {
+                string obj = MoodAnalyzerFactory.InvokeAnalyseMood("HAPPY", "12AnalyseMoodMethod1");
+            }
+            catch (Exception ex)
+            {
+                Assert.AreEqual(expected, ex.Message);
+            }
+        }
+
     }
 
 }
